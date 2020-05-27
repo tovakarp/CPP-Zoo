@@ -23,7 +23,4 @@ protected:
 inline Lion::Lion(std::string name): Mammal(name) {}
 
 
-
-
-
 #endif
