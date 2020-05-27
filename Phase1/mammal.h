@@ -3,21 +3,21 @@
 
 #include "animal.h"
 
-/*Mammal class*/
+
 class Mammal : public Animal{
 public:
     Mammal(std::string);
-	virtual ~Mammal() {}
+
+	virtual unsigned char getPregDuration() const = 0;
+	virtual unsigned char getNumBorn() const = 0;
+
 
 protected:
-    virtual void print(std::ostream&) const = 0;
+    /*virtual*/ void print(std::ostream&) const;
 
 };
 
 inline Mammal :: Mammal(std::string name): Animal(name){}
-
-
-
 
 
 #endif

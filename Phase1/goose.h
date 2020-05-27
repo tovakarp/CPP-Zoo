@@ -9,17 +9,16 @@ class Goose : public Bird{
 public:
     Goose(std::string);
 
+	/*virtual*/ std::string getSpecies() const;
+	/*virtual*/ unsigned char getLifeExpectancy() const;
+	/*virtual*/ std::string getContinents() const;
+	/*virtual*/ std::string getFood() const;
+	/*virtual*/ unsigned char getSpeed() const;
+	/*virtual*/ unsigned short int getHeight() const;
+	/*virtual*/ unsigned char getWingSpan() const;
+
 protected:
 	void print(std::ostream&) const;
-
-private:
-    static std::string m_species;
-    static unsigned char m_life_expectancy;
-    static std::string m_continents;
-    static std::string m_food;
-    static unsigned char m_speed;
-    static unsigned short int m_height;
-    static unsigned char m_wing_span ;
 };
 
 inline Goose :: Goose(std::string name):Bird(name){}

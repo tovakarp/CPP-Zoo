@@ -8,20 +8,22 @@ class Lion : public Mammal{
 public:
     Lion(std::string);
 
+	/*virtual*/ std::string getSpecies() const;
+	/*virtual*/ unsigned char getLifeExpectancy() const;
+	/*virtual*/ std::string getContinents() const;
+	/*virtual*/ std::string getFood() const;
+	/*virtual*/ unsigned char getSpeed() const;
+	/*virtual*/ unsigned char getPregDuration() const;
+	/*virtual*/ unsigned char getNumBorn() const;
+
 protected:
     void print(std::ostream&) const;
-
-private:
-
-    static std::string m_species;
-    static unsigned char m_life_expectancy;
-    static std::string m_continents;
-    static std::string m_food;
-    static unsigned char m_speed;
-    static unsigned char m_preg_duration;
-    static unsigned char m_born_num;
 };
 
 inline Lion::Lion(std::string name): Mammal(name) {}
+
+
+
+
 
 #endif

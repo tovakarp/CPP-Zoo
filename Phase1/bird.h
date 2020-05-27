@@ -3,18 +3,19 @@
 
 #include "animal.h"
 
-/*Bird Class*/
+
 class Bird : public Animal{
 public:
     Bird(std::string);
-    virtual ~Bird() {}
+
+	virtual unsigned short int getHeight() const = 0;
+	virtual unsigned char getWingSpan() const = 0;
 
 protected:
-    virtual void print(std::ostream&) const = 0;
+    /*virtual*/ void print(std::ostream&) const;
 };
 
 inline Bird :: Bird(std::string name): Animal(name){}
-
 
 
 #endif

@@ -3,17 +3,19 @@
 
 #include "animal.h"
 
-/*Fish class*/
+
 class Fish : public Animal{
 public:
     Fish(std::string);
-	virtual ~Fish() {}
+
+	virtual unsigned short int getLowestDepth() const = 0;
 
 protected:
-	virtual void print(std::ostream&) const = 0;
+	/*virtual*/ void print(std::ostream&) const;
 };
 
 inline Fish :: Fish(std::string name): Animal(name){}
+
 
 
 #endif
